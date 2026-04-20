@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BahayPH | Philippine Rentals</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">♾️ <span>BahayPH</span></div>
+        <div class="menu-toggle" id="mobile-menu"><i class='bx bx-menu'></i></div>
+        <ul class="nav-links" id="nav-list">
+            <li><a href="#" class="nav-tab active" data-target="home">Home</a></li>
+            <li><a href="#" class="nav-tab" data-target="properties">Properties</a></li>
+            <li><a href="#" class="nav-tab" data-target="rentals">Rentals</a></li>
+            <li><a href="#" class="nav-tab" data-target="contact">Contact</a></li>
+        </ul>
+        <button class="btn-primary desktop-only" id="openLogin">Login</button>
+    </nav>
+
+    <section id="home" class="tab-content active">
+        <header class="hero">
+            <div class="hero-content">
+                <h1>Find Your Dream Home <br>in the Philippines</h1>
+                <p>Curated listings in BGC, Makati, and Cebu's prime spots.</p>
+                <div class="search-container">
+                    <div class="search-grid">
+                        <div class="filter-box">
+                            <label>City</label>
+                            <select>
+                                <option>Taguig (BGC)</option>
+                                <option>Makati CBD</option>
+                                <option>Cebu IT Park</option>
+                            </select>
+                        </div>
+                        <div class="filter-box border-left">
+                            <label>Budget</label>
+                            <select>
+                                <option>₱25,000 - ₱50,000</option>
+                                <option>₱50,000 - ₱100,000</option>
+                            </select>
+                        </div>
+                        <div class="filter-box border-left">
+                            <label>Type</label>
+                            <select>
+                                <option>Condo Unit</option>
+                                <option>Studio Loft</option>
+                            </select>
+                        </div>
+                        <button class="search-btn interactive" id="homeSearch">Search</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <section id="properties" class="tab-content">
+        <div class="container">
+            <h2 class="section-title">Available Listings</h2>
+            <div class="property-grid">
+                <div class="card" data-title="Uptown Ritz Penthouse" data-price="₱85,000/mo" data-loc="BGC, Taguig City" data-img="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=500&q=80" data-desc="A luxury penthouse with floor-to-ceiling windows overlooking the BGC skyline. Fully furnished with high-end appliances.">
+                    <div class="image-box">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=500&q=80" alt="BGC">
+                        <span class="status-tag">Available</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Uptown Ritz Penthouse</h3>
+                        <p>📍 BGC, Taguig City</p>
+                        <div class="specs">
+                            <span>🛏️ 2 BR</span> <span>🚿 2 Bath</span> <span>📏 85sqm</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="price">₱85,000/mo</span>
+                            <button class="btn-sm interactive detail-trigger">Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-title="Salcedo Village Studio" data-price="₱35,000/mo" data-loc="Makati CBD" data-img="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=80" data-desc="Cozy modern studio in the heart of Makati. Walking distance to parks and restaurants. Ideal for professionals.">
+                    <div class="image-box">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=500&q=80" alt="Makati">
+                        <span class="status-tag">Available</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Salcedo Village Studio</h3>
+                        <p>📍 Makati CBD</p>
+                        <div class="specs">
+                            <span>🛏️ 1 BR</span> <span>🚿 1 Bath</span> <span>📏 42sqm</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="price">₱35,000/mo</span>
+                            <button class="btn-sm interactive detail-trigger">Details →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" data-title="Skyline Residences" data-price="₱28,500/mo" data-loc="Cebu IT Park, Lahug" data-img="https://images.unsplash.com/photo-1493397212122-2b85def82824?auto=format&fit=crop&w=500&q=80" data-desc="Brand new unit in Cebu IT Park. Features high-speed internet capability and 24/7 security. Perfect for digital nomads.">
+                    <div class="image-box">
+                        <img src="https://images.unsplash.com/photo-1493397212122-2b85def82824?auto=format&fit=crop&w=500&q=80" alt="Cebu">
+                        <span class="status-tag">Available</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Skyline Residences</h3>
+                        <p>📍 Cebu IT Park, Lahug</p>
+                        <div class="specs">
+                            <span>🛏️ 1 BR</span> <span>🚿 1 Bath</span> <span>📏 38sqm</span>
+                        </div>
+                        <div class="card-footer">
+                            <span class="price">₱28,500/mo</span>
+                            <button class="btn-sm interactive detail-trigger">Details →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rentals" class="tab-content">
+        <div class="container">
+            <h2 class="section-title">Rental Necessities</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class='bx bxs-file-doc'></i>
+                    <h3>Documentary Requirements</h3>
+                    <ul>
+                        <li><i class='bx bx-check-circle'></i> 2 Valid Government IDs</li>
+                        <li><i class='bx bx-check-circle'></i> Employment Certificate</li>
+                        <li><i class='bx bx-check-circle'></i> ACR I-Card (For Expats)</li>
+                        <li><i class='bx bx-check-circle'></i> Vaccination Record</li>
+                    </ul>
+                </div>
+                <div class="info-card">
+                    <i class='bx bxs-wallet'></i>
+                    <h3>Standard Payment Terms</h3>
+                    <ul>
+                        <li><i class='bx bx-credit-card'></i> 1 Month Advance</li>
+                        <li><i class='bx bx-lock-alt'></i> 2 Months Security Deposit</li>
+                        <li><i class='bx bx-notepad'></i> 11 Post-Dated Checks (PDCs)</li>
+                        <li><i class='bx bx-bolt'></i> Utility Deposit (₱10,000)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="tab-content">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Contact our local agents for a site viewing or virtual tour.</p>
+                    <div class="contact-item"><i class='bx bxs-phone'></i> +63 917 123 4567</div>
+                    <div class="contact-item"><i class='bx bxs-envelope'></i> inquiries@bahayph.com</div>
+                    <div class="contact-item"><i class='bx bxs-map'></i> 28th Street, BGC, Taguig, Metro Manila</div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Full Name" required>
+                    <input type="email" placeholder="Email Address" required>
+                    <select>
+                        <option>General Inquiry</option>
+                        <option>Schedule a Viewing</option>
+                        <option>List My Property</option>
+                    </select>
+                    <textarea placeholder="Your Message..."></textarea>
+                    <button type="submit" class="btn-primary interactive">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Welcome to BahayPH</h2>
+            <p>Please select your account type</p>
+            <div class="role-selector">
+                <button class="role-btn active" data-role="renter">I am a Renter</button>
+                <button class="role-btn" data-role="lister">I am a Lister</button>
+            </div>
+            <form class="login-form">
+                <input type="email" placeholder="Email Address" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit" class="btn-primary full-width">Login</button>
+            </form>
+            <div class="modal-footer">
+                Don't have an account? <a href="#">Sign Up</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="detailModal" class="modal">
+        <div class="modal-content wide">
+            <span class="close-modal">&times;</span>
+            <div class="detail-flex">
+                <img id="detailImg" src="" alt="Property">
+                <div class="detail-info">
+                    <h2 id="detailTitle">Title</h2>
+                    <p id="detailLoc" class="detail-loc">📍 Location</p>
+                    <p id="detailPrice" class="detail-price">Price</p>
+                    <hr>
+                    <h3>Description</h3>
+                    <p id="detailDesc">Description text goes here.</p>
+                    <div class="detail-actions">
+                        <button class="btn-primary interactive">Schedule Viewing</button>
+                        <button class="btn-secondary interactive">Chat with Owner</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
